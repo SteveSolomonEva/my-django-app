@@ -1,0 +1,244 @@
+
+.hero{
+    background-image: url("../images/h1_hero.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+
+.card_background{
+    background-color: white;
+}
+
+
+
+.power{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 2s ease;
+
+}
+
+.power.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+.snoop_in{
+    background-image: url("../images/price_listBG.jpg");
+    background-position: left;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.8s ease;
+}
+
+.snoop_in.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 2s ease;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+.service-card {
+  background-color: rgb(24, 24, 46); /* frame background */
+  padding: 8 0 0 10; /* space inside the frame */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0px 4px 6px rgba(255, 2, 2, 0.3); /* soft shadow */
+}
+
+.service-card img {
+  width: 100%;
+  height: 250px; /* uniform height */
+  object-fit: cover; /* keeps image cropped nicely */
+  border-radius: 8px;
+}
+
+
+
+
+.marquee-container {
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      padding: 10px 0;
+    }
+.marquee-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+    
+}
+
+.marquee-track img:hover {
+    transform: scale(1.2); /* zoom out effect */
+    border-radius: 100px;
+}
+
+.marquee-track img {
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+.about-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #111827; /* deep dark navy/black */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image {
+  flex: 1 1 50%;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 4rem 3rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d4a017; /* gold tone */
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.about-divider {
+  width: 60px;
+  height: 4px;
+  background: #d4a017;
+  margin: 1.5rem 0;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+/* Animation from your scroll observer 
+.power {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.7s ease;
+}
+
+.power.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+*/
+
+
+
+/* for the static backgroud
+/* Reset and basic styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Parallax sections */
+.parallax {
+    height: 200vh;
+    background-attachment: fixed; /* magic for parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Specific background images */
+#parallax1 {
+    background-image: url("../images/slider02.jpg");
+}
+
+#parallax2 {
+    background-image: url("../images/section_bg02.png");
+}
+
+/* Normal section */
+.normal {
+    height: 70vh;
+    padding: 40px;
+    background: #f4f4f4;
+}
+
+
+
+
+/* Left image */
+.img-left {
+  height: 420px; /* Taller left image */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Right image */
+.img-right {
+  height: 300px; /* Shorter right image */
+  object-fit: cover;
+  border-radius: 12px;
+}

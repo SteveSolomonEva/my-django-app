@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero bg-dark text-light p-5 text-center text-sm-start">
+  <div class="container animate-on-scroll">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1>Professional <span class="text-warning">Barber Services</span></h1>
+        <p class="lead my-4">
+          Experience the best haircut, shave, and grooming at our classic barbershop. Book your session now!
+        </p>
+        <a href="{% url 'bookings' %}" class="btn btn-warning btn-lg">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+  <section class=" py-5 bg-dark text-light" id="services">
+  <div class="container">
+    <h2 class="power text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      
+      <!-- Service Item 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="service-card">
+          <img src="{% static 'barber/images/gallery3.png' %}" 
+               alt="Service 1" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Service Item 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="service-card">
+          <img src="{% static 'barber/images/gallery8.jpg' %}" 
+               alt="Service 2" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Service Item 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="service-card">
+          <img src="{% static 'barber/images/gallery1.png' %}" 
+               alt="Service 3" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Service Item 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="service-card">
+          <img src="{% static 'barber/images/gallery4.png' %}" 
+               alt="Service 4" class="img-fluid rounded">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="about-section power py-5">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="static/barber/images/layer-8.jpg" alt="Barber at work">
+    </div>
+    <div class="about-text">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-subtitle">
+        Rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+      </p>
+      <div class="about-divider"></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p>
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="marquee-container py-5">
+  <div class="marquee-track" id="marquee-track">
+    <!-- Your images here (repeat them to create loop effect) -->
+    <img src="{% static 'barber/images/gallery4.png' %}" alt="">
+    <img src="{% static 'barber/images/gallery4.png' %}" alt="">
+    <img src="{% static 'barber/images/gallery4.png' %}" alt="">
+    <img src="{% static 'barber/images/gallery4.png' %}" alt="">
+    <img src="{% static 'barber/images/gallery4.png' %}" alt="">
+    <!-- Repeat for smooth looping -->
+    <img src="{% static 'barber/images/gallery8.jpg' %}" alt="">
+    <img src="{% static 'barber/images/gallery8.jpg' %}" alt="">
+    <img src="{% static 'barber/images/gallery8.jpg' %}" alt="">
+    <img src="{% static 'barber/images/gallery8.jpg' %}" alt="">
+    <img src="{% static 'barber/images/gallery8.jpg' %}" alt="">
+  </div>
+</section>
+
+
+
+
+
+<section class="about-section power snoop_in py-5">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="static/barber/images/gallery1.jpg" alt="Barber at work">
+    </div>
+    <div class="about-text">
+      <h2 class="pricing-title">PRICINGS</h2>
+  <p class="pricing-subtitle">Quality grooming at fair prices</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Haircut</h3>
+      <p class="price">$15</p>
+      <p class="desc">Classic trim & style</p>
+    </div>
+    <div class="pricing-card">
+      <h3>Shave</h3>
+      <p class="price">$10</p>
+      <p class="desc">Clean & sharp finish</p>
+    </div>
+    <div class="pricing-card">
+      <h3>Beard Trim</h3>
+      <p class="price">$12</p>
+      <p class="desc">Neat & stylish shape</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Parallax Section
+     An img looking fixed on background -->
+<section class="parallax" id="parallax1">
+    
+
+  <section id="parallax1" class="d-flex align-items-center text-white">
+  <div class="container text-center py-5">
+    <h2 class="mb-4">What Our Clients Say</h2>
+    <div class="card bg-dark bg-opacity-75 border-0 p-4 mx-auto" style="max-width: 600px;">
+      <div class="card-body">
+        <div class="mb-3">
+          <!-- 5 Star Icons -->
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+        </div>
+        <p class="lead fst-italic text-light">
+          "Best experience I've ever had! The staff were incredibly professional, 
+          and the atmosphere made me feel right at home."
+        </p>
+        <h5 class="mt-4 fw-bold text-warning">— Arthestan —</h5>
+        <img src="static/barber/images/h1-banner06.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+    </div>
+</section>
+
+<!-- Normal Section -->
+<div class="col-md-6 py-5">
+            <h2 class="mb-4 text-primary">About Us</h2>
+            <p class="lead">
+                We have been serving our clients for over <strong>20 years</strong>, 
+                offering professional grooming services with style, precision, and care.
+            </p>
+            <p>
+                Our mission is to create a space where every client feels relaxed, 
+                confident, and refreshed. From modern haircuts to classic styles, 
+                our expert barbers are here to make you look your best.
+            </p>
+            <a href="{% url 'services' %}" class="btn btn-outline-primary mt-3">Explore Our Services</a>
+        </div>
+    </div>
+</div>
+
+<!-- Another Parallax Section -->
+<section class="parallax text-white d-flex align-items-center" id="parallax2">
+  <div class="container py-5 text-center">
+    
+    <!-- Section Title -->
+    <h1 class="display-4 fw-bold mb-4">Our Services</h1>
+    <p class="lead mb-5">
+      For over 20 years, we’ve been redefining grooming with a mix of tradition and modern style.  
+      Explore our wide range of professional services tailored to your needs.
+    </p>
+
+    <!-- Service Cards -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-dark bg-opacity-75 rounded shadow">
+          <h3 class="fw-bold">✂️ Haircuts</h3>
+          <p>Classic and modern styles that suit your personality, crafted with precision.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-dark bg-opacity-75 rounded shadow">
+          <h3 class="fw-bold">🧔 Beard Grooming</h3>
+          <p>From sharp trims to full beard care, we keep you looking clean and confident.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-dark bg-opacity-75 rounded shadow">
+          <h3 class="fw-bold">💆 Relaxation</h3>
+          <p>Head massage, scalp treatment, and relaxation services for total refreshment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="row text-center mt-5">
+      <div class="col-md-4">
+        <h2 class="fw-bold">500+</h2>
+        <p>Happy Clients</p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="fw-bold">20+</h2>
+        <p>Years Experience</p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="fw-bold">5+</h2>
+        <p>Professional Barbers</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- 🌙 Footer -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About Us</h5>
+        <p class="small">
+          We are dedicated to providing professional barber services, 
+          sharp crafts, and outstanding training for the next generation of artists.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'home' %}" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="{% url 'serves' %}" class="text-decoration-none text-light">Services</a></li>
+          <li><a href="{% url 'bookings' %}" class="text-decoration-none text-light">Booking</a></li>
+          <li><a href="{% url 'pictures' %}" class="text-decoration-none text-light">Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Contact Us</h5>
+        <p class="small mb-1"><i class="bi bi-telephone me-2"></i>+234 701 772 3883</p>
+        <p class="small mb-1"><i class="bi bi-envelope me-2"></i>Steve Solomon</p>
+        <p class="small mb-1"><i class="bi bi-envelope me-2"></i>iamstevesolomon@gmail.com</p>
+        <p class="small"><i class="bi bi-geo-alt me-2"></i>Benin-City, Nigeria</p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+
+    <!-- Copyright -->
+    <div class="text-center small">
+      &copy; {{ now|date:"Y" }} Your Barber Shop. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+{% endblock %}

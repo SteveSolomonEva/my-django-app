@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Gallery Header -->
+<section class="py-5 text-center bg-light">
+    <div class="container">
+        <h1 class="display-4 mb-3">Our Gallery</h1>
+        <p class="lead text-muted">Explore the craft, precision, and artistry of our barbers.</p>
+        <p class="lead text-muted marquee-track" >images from our SALOON will be uploaded in a while.. pls try again</p>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Example Image Card -->
+            {% comment %} Replace src with your actual images {% endcomment %}
+            {% for i in "123456789" %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <img src="{% static 'barber/images/a.jpg' %}" 
+                         class="card-img-top img-fluid gallery-img" 
+                         alt="Gallery Image {{ forloop.counter }}" 
+                         style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <p class="card-text text-muted mb-0">Caption {{ forloop.counter }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<!-- Optional: Lightbox Button (opens images larger if you want) -->
+<section class="py-4 text-center">
+    <div class="container">
+        <p class="text-muted">Click on an image to view it in full size (coming soon).</p>
+    </div>
+</section>
+
+<!-- Gallery Image Hover Effect -->
+<style>
+.gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">Bookings</h1>
+
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'serves' %}">My Booking</a>
+    </li>
+    {% endif %}
+
+    <div class="row">
+        {% for booking in bookings %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <!-- Booking info -->
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ booking.full_name }}</h5>
+                        <p class="card-text">
+                            Email: {{ booking.email }}<br>
+                            Phone: {{ booking.phone }}<br>
+                            Date: {{ booking.date }}<br>
+                            Start: {{ booking.start_time }} | End: {{ booking.end_time }}
+                        </p>
+                        <a href="{% url 'book_service' %}" class="btn btn-primary">
+                            Make a Booking
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12 text-center">
+                <p>No bookings available yet.</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+

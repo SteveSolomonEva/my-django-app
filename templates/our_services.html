@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Our Services Section -->
+    <h1 class="text-center mb-5">Our Services</h1>
+    <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'barber/images/home.webp' %}" 
+                     class="card-img-top" 
+                     alt="Home Service" 
+                     style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Home Service</h5>
+                    <p class="card-text">We provide home service for your convenience.</p>
+                    <a href="{% url 'book_service' %}" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'barber/images/learn.jpg' %}" 
+                     class="card-img-top" 
+                     alt="Training Boys" 
+                     style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Training Boys (Apprentice)</h5>
+                    <p class="card-text">We train apprentices to become skilled barbers.</p>
+                    <a href="{% url 'book_service' %}" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'barber/images/tatto.jpg' %}" 
+                     class="card-img-top" 
+                     alt="Tattoo" 
+                     style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tattoo</h5>
+                    <p class="card-text">Professional tattoo services available.</p>
+                    <a href="{% url 'book_service' %}" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section: Sharp Craft -->
+    <!-- Classic Gallery Call-to-Action -->
+<section class="py-5 text-center bg-light">
+    <div class="container">
+        <h3 class="mb-3">Discover More of Our Work</h3>
+        <p class="mb-4 text-muted">See the full gallery of our skilled barbers and their craftsmanship.</p>
+        <a href="{% url 'pictures' %}" class="btn btn-primary btn-lg">Go to Gallery</a>
+    </div>
+</section>
+
+    <!-- Gallery Section: Outstanding Artists -->
+    <h2 class="text-center my-5">Our Outstanding Artists</h2>
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="{% static 'barber/images/2.jpg' %}" 
+                 class="card-img-top" 
+                 alt="Artist 1" 
+                 style="height: 250px; object-fit: cover;">
+            <div class="card-body text-center">
+                <h5 class="card-title">John Doe</h5>
+                <p class="card-text">Specialist in classic barber styles.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="{% static 'barber/images/12.png' %}" 
+                 class="card-img-top" 
+                 alt="Artist 2" 
+                 style="height: 250px; object-fit: cover;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Jane Smith</h5>
+                <p class="card-text">Expert in modern hairstyles and grooming.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="{% static 'barber/images/3.jpg' %}" 
+                 class="card-img-top" 
+                 alt="Artist 3" 
+                 style="height: 250px; object-fit: cover;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Michael Lee</h5>
+                <p class="card-text">Master Barber with 30 years of experience.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+{% endblock %}

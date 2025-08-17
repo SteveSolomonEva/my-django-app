@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">Book Our Services</h1>
+    <div class="text-center mb-4">
+        <a href="{% url 'my_booking' %}" class="btn btn-outline-primary">
+            My Booking
+        </a>
+    </div>
+    <div class="row">
+        {% for service in services %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <!-- Service Image -->
+                    {% if service.image %}
+                        <img src="{{ service.image.url }}" 
+                             class="card-img-top" 
+                             alt="{{ service.name }}" 
+                             style="height: 250px; object-fit: cover;">
+                    {% else %}
+                        <img src="{% static 'barber/images/gallery1.jpg' %}" 
+                             class="card-img-top" 
+                             alt="{{ service.name }}" 
+                             style="height: 250px; object-fit: cover;">
+                    {% endif %}
+
+                    <!-- Card Body -->
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ service.name }}</h5>
+                        <p class="card-text">{{ service.description|truncatewords:15 }}</p>
+                        <a href="{% url 'book_service' %}" class="btn btn-primary">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12 text-center">
+                <p>No services available yet.</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
