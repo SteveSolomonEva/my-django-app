@@ -1,3 +1,33 @@
+/*logo background  */
+
+.contact-logo {
+  position: relative;
+  background: url("../images/shave-logo-white.png") no-repeat center;
+  background-size: 150px; /* adjust size */
+  opacity: 0.9; /* slightly fade text with logo */
+  background-blend-mode: lighten;
+  border-radius: 30px;
+  overflow: hidden;
+  
+}
+
+.contact-logo h5,
+.contact-logo p {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for text readability */
+  z-index: 1;
+}
+
+
+
+
 
 .hero{
     background-image: url("../images/h1_hero.png");
