@@ -2,6 +2,10 @@
 
 {% block content %}
     <h1>🎉 Booking Confirmed!</h1>
+    <p>Thank you, {{ booking.full_name }}!</p>
+    <p>Service: {{ booking.service.name }}</p>
+    <p>Date: {{ booking.date|date:"l, F j, Y" }}</p>
+    <p>Time: {{ booking.start_time|time:"g:i A" }} - {{ booking.end_time|time:"g:i A" }}</p>
     <p>We saved your reservation. Check your email if you add emailing later.</p>
     <p><a href="/">Go home</a></p>
 {% endblock %}

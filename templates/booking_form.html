@@ -44,6 +44,15 @@
                                    class="form-control" id="id_date">
                         </div>
 
+                        <div class="mb-3">
+                        <label for="id_service" class="form-label">Select Service</label>
+                            <select name="service" id="id_service" class="form-control" required>
+                                {% for service in services %}
+                                    <option value="{{ service.id }}">{{ service.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
                         <!-- Start Time -->
                         <div class="mb-3">
                             <label for="id_start_time" class="form-label">Start Time</label>
