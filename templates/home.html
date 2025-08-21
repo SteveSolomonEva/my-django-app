@@ -60,38 +60,27 @@
 </section>
 
 
-
-<section class="about-section py-5">
-  <div class="container about-container">
-    <!-- Image -->
-    <div class="about-image col-md-6">
-      <img src="{% static 'barber/images/Layer-8.jpg' %}" alt="Barber at work">
-    </div>
-
-   <section class="about-section py-5">
+<section class="about-section power py-5">
   <div class="container">
     <div class="row align-items-center">
       
       <!-- Image -->
-      <div class="col-md-6 mb-4 mb-md-0">
+      <div class="col-md-6">
         <div class="about-image">
-          <img src="{% static 'barber/images/about.jpg' %}" alt="About us" class="img-fluid">
+          <img src="static/barber/images/Layer-8.jpg" alt="Barber at work" class="img-fluid rounded">
         </div>
       </div>
-      
+
       <!-- Text -->
       <div class="col-md-6">
         <div class="about-text">
-          <h2 class="about-title mb-3">About Us</h2>
-          <p class="about-subtitle mb-3">
-            We have been serving our clients for over 20 years...
+          <h2 class="about-title">About Us</h2>
+          <p class="about-subtitle">
+            Rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
           </p>
-          <div class="about-divider mb-3"></div>
+          <div class="about-divider"></div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-          </p>
-          <p>
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor…
           </p>
         </div>
       </div>
@@ -99,6 +88,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -124,49 +114,36 @@
 
 
 
-<section class="about-section py-5">
-  <div class="container">
-    <div class="row align-items-center">
+<section class="about-section power snoop_in py-5">
+  <div class="about-container row align-items-center">
+    
+    <!-- Image: hide on small screens -->
+    <div class="about-image col-md-6 d-none d-md-block">
+      <img src="static/barber/images/gallery1.jpg" alt="Barber at work" class="img-fluid rounded">
+    </div>
+    
+    <!-- Text: always show -->
+    <div class="about-text col-12 col-md-6">
+      <h2 class="pricing-title">PRICINGS</h2>
+      <p class="pricing-subtitle">Quality grooming at fair prices</p>
 
-      <!-- Image -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <div class="about-image">
-          <img src="{% static 'barber/images/gallery1.jpg' %}" alt="Barber at work" class="img-fluid">
+      <div class="pricing-grid row">
+        <div class="pricing-card col-6 col-md-4">
+          <h3>Haircut</h3>
+          <p class="price">$15</p>
+          <p class="desc">Classic trim & style</p>
+        </div>
+        <div class="pricing-card col-6 col-md-4">
+          <h3>Shave</h3>
+          <p class="price">$10</p>
+          <p class="desc">Clean & sharp finish</p>
+        </div>
+        <div class="pricing-card col-6 col-md-4">
+          <h3>Beard Trim</h3>
+          <p class="price">$12</p>
+          <p class="desc">Neat & stylish shape</p>
         </div>
       </div>
-
-      <!-- Text + Pricing -->
-      <div class="col-md-6">
-        <div class="about-text">
-          <h2 class="pricing-title">PRICINGS</h2>
-          <p class="pricing-subtitle">Quality grooming at fair prices</p>
-
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="pricing-card">
-                <h3>Haircut</h3>
-                <p class="price">$15</p>
-                <p class="desc">Classic trim & style</p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="pricing-card">
-                <h3>Shave</h3>
-                <p class="price">$10</p>
-                <p class="desc">Clean & sharp finish</p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="pricing-card">
-                <h3>Beard Trim</h3>
-                <p class="price">$12</p>
-                <p class="desc">Neat & stylish shape</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -177,11 +154,10 @@
 
     <!-- Parallax Section
      An img looking fixed on background -->
-<section id="parallax1" class="parallax d-flex align-items-center text-white">
-
+<section class="parallax" id="parallax1">
     
 
-
+  <section id="parallax1" class="d-flex align-items-center text-white">
   <div class="container text-center py-5">
     <h2 class="mb-4">What Our Clients Say</h2>
     <div class="card bg-dark bg-opacity-75 border-0 p-4 mx-auto" style="max-width: 600px;">
@@ -199,11 +175,11 @@
           and the atmosphere made me feel right at home."
         </p>
         <h5 class="mt-4 fw-bold text-warning">— Arthestan —</h5>
-        <img src="{% static 'barber/images/h1-banner06.jpg' %}" alt="" class="img-fluid">
-
+        <img src="static/barber/images/h1-banner06.jpg" alt="">
       </div>
     </div>
   </div>
+</section>
 
         
     </div>
