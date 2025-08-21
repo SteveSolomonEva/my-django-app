@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
+
+<div class="text-center mb-4 mt-4">
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+        <a href="{% url 'my_booking' %}" class="btn btn-outline-primary">My Booking</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="btn btn-outline-success">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline-primary">Sign Up</a>
+    {% endif %}
+</div>
+
+
+
+
 <div class="container py-5">
     <h1 class="text-center mb-5">Book Our Services</h1>
     <div class="text-center mb-4">

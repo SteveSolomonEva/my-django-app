@@ -42,30 +42,52 @@ def gallery(request):
     return render(request, 'gallery.html', {'bookings': pictures})
 
 # Booking creation page
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.db.models import Q
+from .forms import BookingForm
+from .models import Booking
+
+@login_required
 def book_service(request):
-    if request.method == 'POST':
+    if not request.user.is_authenticated:   # 👈 added check
+        return redirect('signup')           # or 'login'
+
+    if request.method == 'POST':            # 👈 your original code continues here
         form = BookingForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
 
-            # Validate times
+            # Field-level sanity check
             if cd['end_time'] <= cd['start_time']:
-                return render(request, 'booking_form.html', {
-                    'form': form,
-                    'error': 'End time must be after start time.'
-                })
+                # attach to the field so the error shows nicely under it
+                form.add_error('end_time', 'End time must be after start time.')
+            else:
+                # Overlap check (basic): any confirmed booking that intersects this window on this date
+                overlap_exists = Booking.objects.filter(
+                    date=cd['date'],
+                    status='confirmed'  # adjust if your model uses a different status value
+                ).filter(
+                    Q(start_time__lt=cd['end_time']) &
+                    Q(end_time__gt=cd['start_time'])
+                ).exists()
 
-            # Save booking
-            Booking.objects.create(
-                full_name=cd['full_name'],
-                email=cd['email'],
-                phone=cd['phone'],
-                date=cd['date'],
-                start_time=cd['start_time'],
-                end_time=cd['end_time'],
-                status='confirmed'
-            )
-            return redirect('booking_success')
+                if overlap_exists:
+                    # non-field error (top of form), since it concerns multiple fields
+                    form.add_error(None, 'That time slot is already taken. Please choose another one.')
+                else:
+                    booking = Booking.objects.create(
+                        full_name=cd['full_name'],
+                        email=cd['email'],
+                        phone=cd['phone'],
+                        date=cd['date'],
+                        start_time=cd['start_time'],
+                        end_time=cd['end_time'],
+                        status='confirmed'
+                    )
+                    # Redirect with ID so success page can show details if you want
+                    return redirect('booking_success', booking_id=booking.id)
+        # if invalid, fall through to re-render with errors
     else:
         form = BookingForm()
 

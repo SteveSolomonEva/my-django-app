@@ -13,7 +13,8 @@ urlpatterns = [
     # Booking paths
     path("bookings/", views.bookings_list, name="bookings"),        # list all bookings
     path("book/", views.book_service, name="book_service"),          # create a new booking
-    path("booking/success/", views.booking_success, name="booking_success"),
+    #path("booking/success/", views.booking_success, name="booking_success"),
+    path('booking/success/<int:booking_id>/', views.booking_success, name='booking_success'),    #new
     path('services/', views.services_list, name='services'),
     path('our_service/', views.all_services, name='serves'),
     path('gallery/', views.gallery, name= 'pictures'),
