@@ -1,3 +1,11 @@
+
+/* removed the white space in homepage */
+html, body {
+  overflow-x: hidden;
+}
+
+
+
 /* sliding pics to fit in mobile screen*/
 
 .about-container {

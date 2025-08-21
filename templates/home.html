@@ -63,27 +63,33 @@
 
 <section class="about-section py-5">
   <div class="container about-container">
-    <!-- Image -->
-    <div class="about-image col-md-6">
-      <img src="{% static 'barber/images/Layer-8.jpg' %}" alt="Barber at work">
-    </div>
+    <div class="row align-items-center">
+      <!-- Image -->
+      <div class="about-image col-md-6">
+        <img src="{% static 'barber/images/Layer-8.jpg' %}" 
+             alt="Barber at work" 
+             class="img-fluid h-100 object-fit-cover">
+      </div>
 
-    <!-- Text Content -->
-    <div class="about-text col-md-6">
-      <h2 class="about-title mb-3">About Us</h2>
-      <p class="about-subtitle mb-3">
-        We have been serving our clients for over 20 years...
-      </p>
-      <div class="about-divider mb-3"></div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <p>
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+      <!-- Text Content -->
+      <div class="about-text col-md-6">
+        <h2 class="about-title mb-3">About Us</h2>
+        <p class="about-subtitle mb-3">
+          We have been serving our clients for over 20 years...
+        </p>
+        <div class="about-divider mb-3"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 
 
@@ -110,32 +116,42 @@
 
 
 <section class="about-section power snoop_in py-5">
-  <div class="about-container">
-    <div class="about-image">
-      <img src="{% static 'barber/images/gallery1.jpg' %}" alt="Barber at work">
-    </div>
-    <div class="about-text">
-      <h2 class="pricing-title">PRICINGS</h2>
-  <p class="pricing-subtitle">Quality grooming at fair prices</p>
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image -->
+      <div class="about-image col-6">
+        <img src="{% static 'barber/images/gallery1.jpg' %}" alt="Barber at work" class="img-fluid">
+      </div>
 
-  <div class="pricing-grid">
-    <div class="pricing-card">
-      <h3>Haircut</h3>
-      <p class="price">$15</p>
-      <p class="desc">Classic trim & style</p>
-    </div>
-    <div class="pricing-card">
-      <h3>Shave</h3>
-      <p class="price">$10</p>
-      <p class="desc">Clean & sharp finish</p>
-    </div>
-    <div class="pricing-card">
-      <h3>Beard Trim</h3>
-      <p class="price">$12</p>
-      <p class="desc">Neat & stylish shape</p>
+      <!-- Text + Pricing -->
+      <div class="about-text col-6">
+        <h2 class="pricing-title">PRICINGS</h2>
+        <p class="pricing-subtitle">Quality grooming at fair prices</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Haircut</h3>
+            <p class="price">$15</p>
+            <p class="desc">Classic trim & style</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Shave</h3>
+            <p class="price">$10</p>
+            <p class="desc">Clean & sharp finish</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Beard Trim</h3>
+            <p class="price">$12</p>
+            <p class="desc">Neat & stylish shape</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 
 
